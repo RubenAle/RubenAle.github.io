@@ -1,0 +1,365 @@
+:root {
+  --bodyColor: rgb(47, 79, 79);
+  --titleColor: rgb(222, 184, 135);
+  --subtitleColor: rgb(165, 42, 42);
+  --logoColor: rgb(255, 99, 71);
+  --bgColorBody: rgb(255, 245, 238);
+  --bgColorFooter: rgb(90, 2, 86);
+  --logoFont: "Pushster", cursive;
+  --mainFont: "Roboto Mono", monospace;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bgColorBody);
+  color: var(--bodyColor);
+  font-size: 16px;
+  font-family: var(--mainFont);
+}
+
+hr {
+  width: 60%;
+  border: thin solid var(--bgColorFooter);
+  border-radius: 1rem;
+}
+
+/* Hero image */
+.heroImage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(215, 141, 250, 0.5),
+      rgba(134, 54, 172, 0.5),
+      rgba(90, 2, 86, 0.9)
+    ),
+    url("../img/heroImage.jpg");
+  background-size: cover;
+  background-position: 5% -20px;
+  background-attachment: fixed;
+  color: var(--logoColor);
+  font-family: var(--logoFont);
+}
+
+.heroImageWave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.heroImageTitle {
+  width: 100%;
+  margin: 0.5rem auto;
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: 5px 5px brown;
+  transition: font-size 0.3s;
+}
+
+.heroImageTitle a {
+  color: var(--logoColor);
+  text-decoration-line: none;
+}
+
+.heroImageTitle:hover {
+  font-size: 4.2rem;
+}
+
+.heroImageQuote {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(245, 245, 245);
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 1px #f738c7;
+}
+
+.heroImageQuote span {
+  color: var(--bgColorBody);
+  font-family: var(--logoFont);
+}
+
+/* Header */
+
+.header {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  width: 100%;
+  padding: 0.2rem;
+  background-color: var(--bgColorBody);
+}
+
+.headerLogo {
+  width: 40%;
+  margin: 0;
+  font-size: 1.1rem;
+  font-family: var(--logoFont);
+  text-align: center;
+  text-shadow: 0.5px 0.5px brown;
+}
+
+.headerLogo a {
+  color: var(--logoColor);
+  text-decoration: none;
+}
+
+.headerNav {
+  width: 60%;
+}
+
+.headerNav > ul {
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.headerNav a {
+  padding-right: 0.5rem;
+  text-decoration: none;
+}
+
+.headerNav a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.headerNav a:any-link {
+  color: var(--titleColor);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+/* Abut me */
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.aboutMeFace {
+  width: 8rem;
+  border: medium solid var(--bgColorFooter);
+  border-radius: 50%;
+  outline: thin dashed var(--bgColorFooter);
+  outline-offset: 0.4rem;
+}
+
+.aboutMeDescription {
+  width: 100%;
+  margin: 1rem auto 0;
+}
+
+.aboutMeDescription > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.aboutMeDescription > a:hover {
+  text-decoration: underline;
+  color: var(--bgColorFooter);
+}
+
+/* Last videos */
+
+.lastvideos {
+  width: 100%;
+}
+
+.lastVideosTitle {
+  margin: 1rem auto;
+  color: var(--titleColor);
+  font-size: 1.5rem;
+  font-family: var(--logoFont);
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+
+.lastVideosFirst {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  border: medium double brown;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.lastVideosFirst-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px 1px rgba(222, 184, 135, 0.5);
+}
+
+.lastVideosFirst-description > h3 {
+  color: var(--subtitleColor);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.lastVideosFirst-description > p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--bgColorFooter);
+}
+
+.footerPhrase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: var(--logoColor);
+  font-size: 1rem;
+  font-family: var(--logoFont);
+  text-align: center;
+  text-shadow: 0.1px 0.1px black;
+}
+
+.footerPhrase > h3 {
+  margin: 0;
+}
+
+.footerSocialMedia {
+  width: 60%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.footerSocialMedia > a:any-link {
+  color: var(--bgColorFooter);
+}
+
+.footerSocialMedia > a:hover {
+  opacity: 0.8;
+}
+
+/* *************** */
+ @media screen and (min-width:480px) {
+    .heroImage {
+        background-position: left center;
+    }
+
+    .headerLogo{
+        font-size: 1.7rem;
+    }
+
+    .headerNav {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+
+    .headerNav a{
+        padding-right: 1rem;
+    }
+
+    .footerPhrase{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    
+    .heroImageTitle{
+        font-size: 6rem;
+        transition: font-size .5s;
+    }
+
+    
+    .heroImageTitle:hover{
+        font-size: 6.5rem;
+    }
+
+    .headerNav a{
+        margin-right: 2rem;
+    }
+
+    main{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
+    .lastVideosTitle{
+        font-size: 1.5rem;
+    }
+
+    .lastVideosFirst{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reverse{
+        flex-direction: row-reverse;
+    }
+
+    .lastVideosFirst-img{
+        width: 50%;
+    }
+
+    .lastVideosFirst-description{
+        width: 50%;
+    }
+
+    .footerSocialMedia{
+        justify-content: center;
+    }
+
+    .footerSocialMedia a{
+        padding-right: 2rem;
+    }
+
+}
+
+@media screen and (min-width:960px) {
+    .headerLogo,
+    .headerNav,
+    .lastVideosTitle,
+    .footerPhrase{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main{
+        width: 70%;
+    }
+}
